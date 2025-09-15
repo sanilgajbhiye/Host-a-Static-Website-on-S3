@@ -63,7 +63,8 @@ S3 Bucket/
 5. Configure remaining settings as needed
 6. Create the bucket
 
-![S3 Bucket Creation Success](<img width="1918" height="910" alt="S3 bucket " src="https://github.com/user-attachments/assets/71a72078-8dc4-4b0d-9360-7376efa8b057" />)
+![S3 Bucket Creation Success]
+(<img width="1918" height="910" alt="S3 bucket " src="https://github.com/user-attachments/assets/71a72078-8dc4-4b0d-9360-7376efa8b057" />)
 *Successfully created S3 bucket 'nextwork-website-project-sanil' in Asia Pacific (Mumbai) region*
 
 > **Important**: S3 bucket names are globally unique across all AWS accounts worldwide.
@@ -74,7 +75,8 @@ S3 Bucket/
 2. Upload `NextWork - Everyone should be in a job they love_files` folder containing all image assets
 3. Ensure all necessary files are properly uploaded
 
-![S3 Bucket Objects](<img width="1918" height="906" alt="FIles and folders in S3" src="https://github.com/user-attachments/assets/84b3304f-df7f-4184-bc2e-1e356ae6401e" />)
+![S3 Bucket Objects]
+(<img width="1918" height="906" alt="FIles and folders in S3" src="https://github.com/user-attachments/assets/84b3304f-df7f-4184-bc2e-1e356ae6401e" />)
 *S3 bucket showing uploaded files: index.html (58.8 KB) and NextWork assets folder*
 
 ### Step 3: Enable Static Website Hosting
@@ -87,7 +89,8 @@ S3 Bucket/
 6. Set **Index document** to `index.html`
 7. Save changes
 
-![Static Website Hosting Configuration](<img width="1918" height="903" alt="Static website setting" src="https://github.com/user-attachments/assets/c99bb41d-a713-410b-8f8c-6153e3723db5" />)
+![Static Website Hosting Configuration]
+(<img width="1918" height="903" alt="Static website setting" src="https://github.com/user-attachments/assets/c99bb41d-a713-410b-8f8c-6153e3723db5" />)
 *Static website hosting configuration showing 'Enable' selected and index.html configured as the index document*
 
 **Result**: S3 generates a bucket endpoint URL for public access.
@@ -97,7 +100,8 @@ S3 Bucket/
 #### Problem
 Initial access to bucket endpoint URL results in "403 Forbidden" error because uploaded files remain private despite enabled static hosting.
 
-![403 Forbidden Error](<img width="1918" height="230" alt="URL access error" src="https://github.com/user-attachments/assets/215d68fc-ec57-410b-bc8d-42f030c333cb" />)
+![403 Forbidden Error]
+(<img width="1918" height="230" alt="URL access error" src="https://github.com/user-attachments/assets/215d68fc-ec57-410b-bc8d-42f030c333cb" />)
 *403 Forbidden error encountered when trying to access the website before configuring public permissions*
 
 #### Solution: Configure ACL for Public Access
@@ -124,7 +128,8 @@ Initial access to bucket endpoint URL results in "403 Forbidden" error because u
 
 #### Sample Bucket Policy Structure
 
-![Bucket Policy Configuration](<img width="1918" height="907" alt="bucket policy " src="https://github.com/user-attachments/assets/1abbb02d-fdd0-40b4-89d4-efa51b511344" />)
+![Bucket Policy Configuration]
+(<img width="1918" height="907" alt="bucket policy " src="https://github.com/user-attachments/assets/1abbb02d-fdd0-40b4-89d4-efa51b511344" />)
 *Bucket policy JSON configuration showing deny statement for deletion actions*
 
 ```json
@@ -151,7 +156,8 @@ Initial access to bucket endpoint URL results in "403 Forbidden" error because u
 
 #### Bucket Policy Effectiveness Test
 
-![Bucket Policy Protection Test](<img width="1918" height="903" alt="Access denied to delete objects " src="https://github.com/user-attachments/assets/eec765b8-5d41-4781-9edf-ba354a4c5835" />)
+![Bucket Policy Protection Test]
+(<img width="1918" height="903" alt="Access denied to delete objects " src="https://github.com/user-attachments/assets/eec765b8-5d41-4781-9edf-ba354a4c5835" />)
 *Demonstration of bucket policy effectiveness - 45 objects (2.7 MB) failed to delete due to "Access denied" errors, proving the policy is working correctly*
 
 > **Note**: All three deletion-related actions are required because objects can be deleted either explicitly via DELETE API or through lifecycle configuration.
