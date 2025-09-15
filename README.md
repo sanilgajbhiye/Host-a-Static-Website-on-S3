@@ -241,4 +241,5 @@ This project is created for educational purposes as part of NextWork learning pr
 ## 🎉 Final Result
 
 **Success!** The static website is now publicly accessible through the S3 bucket endpoint URL. Visitors can view the complete NextWork website including all images and interactive elements.
+
 <img width="1918" height="907" alt="working website" src="https://github.com/user-attachments/assets/c0efa897-264c-416e-a62f-1df0ef56b9d7" />
